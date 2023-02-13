@@ -8,7 +8,7 @@ class prueba:public GameObject
 {
 public:
 	prueba(Scene* scene) :GameObject(scene) {
-		auto& sdl = *SDLUtils::instance();
+		//auto& sdl = *SDLUtils::instance();
 		new PruebaComponent( &(sdl.images().at("prueba")), this,_ecs::cmp_TRANSFORM);
 	};
 	
