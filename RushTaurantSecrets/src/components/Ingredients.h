@@ -58,8 +58,6 @@ public:
 		//addIngredient(HARINA);
 		//addIngredient(HUEVO);
 	}
-	
-	void setKitchenIsland(KitchenIslandComp* k) { kitchenIsland = k; }
 	//devuelve por ref
 	vector<_ecs::_ingredients_id>& getIngredients() { return ingredients; };
 	void addIngredient(_ecs::_ingredients_id ingr);
@@ -68,5 +66,6 @@ public:
 	void cookingIngredients();
 	void removeWhenExit();
 	void render();
+	void initComponent() override;
 
 };

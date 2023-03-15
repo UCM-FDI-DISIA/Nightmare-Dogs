@@ -5,7 +5,7 @@
 #include "../utils/checkML.h"
 
 KitchenTriggerComp::KitchenTriggerComp(GameObject* parent, Vector pos_, float width_, float height_) : TriggerComp(parent, pos_, width_, height_) {
-	ing = parent->getScene()->getGameObject(_ecs::hdr_PLAYER)->getComponent<Ingredients>();
+	ing = parent->getScene()->getGameObject(_ecs::hdr_PLAYER1)->getComponent<Ingredients>();
 	ih = InputHandler::instance();
 }
 

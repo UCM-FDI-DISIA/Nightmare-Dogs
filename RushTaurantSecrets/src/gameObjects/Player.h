@@ -12,7 +12,7 @@ class Player :public GameObject
 private:
 	int player;
 public:
-	Player(Scene * scene, int _player) :GameObject(scene, _ecs::grp_PLAYER, _ecs::hdr_PLAYER), player(_player) {
+	Player(Scene * scene, int _player) :GameObject(scene, _ecs::grp_PLAYER, _ecs::hdr_PLAYER1), player(_player) {
 		new Transform(this, Vector(500, 200), Vector(0, 0), 48, 96, 0);
 		new PlayerMovementController(this, player);
 		new CollisionComp(this, { 0,48 * sdlutils().getResizeFactor() }, 48 * sdlutils().getResizeFactor(), 48 * sdlutils().getResizeFactor());

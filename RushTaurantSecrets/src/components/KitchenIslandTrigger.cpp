@@ -3,21 +3,35 @@
 #include "../utils/checkML.h"
 
 KitchenIslandTrigger::KitchenIslandTrigger(GameObject* parent, Vector pos_, float width_, float height_, int i_, int orient_) :
-	TriggerComp(parent, pos_, width_, height_), i(i_), orient(orient_), ki(parent->getScene()->getGameObject(_ecs::hdr_KITCHENISLAND)->getComponent<KitchenIslandComp>()), p(parent->getScene()->getGameObject(_ecs::hdr_PLAYER)->getComponent<Transform>()) {}
+	TriggerComp(parent, pos_, width_, height_), i(i_), orient(orient_), ki(parent->getScene()->getGameObject(_ecs::hdr_KITCHENISLAND)->getComponent<KitchenIslandComp>()) {}
 
 void KitchenIslandTrigger::isOverlapping() {
-	float aux = p->getPos().getX() + p->getW() / 2;
-	if (p->getOrientation() != orient && aux > transform_->getPos().getX() && aux < transform_->getPos().getX() + width)
+	auto trans_ = other_->getComponent<Transform>();
+	float aux = trans_->getPos().getX() + trans_->getW() / 2;
+	if (trans_->getOrientation() != orient && aux > transform_->getPos().getX() && aux < transform_->getPos().getX() + width)
 	{
-		ki->selectedIng(i);
+		KitchenIslandComp::Player p;
+		if (parent->getScene()->getGameObject(_ecs::hdr_PLAYER1) == other_) //si es player 1
+			p = KitchenIslandComp::Player::p1;
+		else p = KitchenIslandComp::Player::p2;
+
+		ki->selectedIng(i, p);
 		if (ih->joysticksInitialised()) {
 			if (!ih->getButtonState(0, SDL_CONTROLLER_BUTTON_A)) return;
 		}
 		else if (!ih->isKeyDown(SDLK_SPACE)) return;
-		ki->pickIngredient(i);
+		ki->pickIngredient(i, p);
 	}
-	else if (p->getOrientation() == orient)ki->unselectIng(i);
+	else if (trans_->getOrientation() == orient) {
+		unselect();
+	}
 }
 void KitchenIslandTrigger::onTriggerExit() {
-	ki->unselectIng(i);
+	unselect();
+}
+
+void KitchenIslandTrigger::unselect() {
+	if (parent->getScene()->getGameObject(_ecs::hdr_PLAYER1) == other_) //si es player 1
+		ki->unselectIng(i, KitchenIslandComp::Player::p1);
+	else ki->unselectIng(i, KitchenIslandComp::Player::p2);
 }

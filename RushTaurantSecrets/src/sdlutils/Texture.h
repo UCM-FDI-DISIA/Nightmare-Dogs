@@ -65,8 +65,8 @@ public:
 	// This rendering method corresponds to method SDL_RenderCopyEx.
 	//
 	// Renders part of the texture (src) to a destination rectangle (dest)
-	// with a rotation (angle) around point p (of dest), and flips
-	// according to the value of flip. If 'p'is nullptr, the rotation is done
+	// with a rotation (angle) around point p1 (of dest), and flips
+	// according to the value of flip. If 'p1'is nullptr, the rotation is done
 	// wrt. the center
 	//
 	inline void render(const SDL_Rect &src, const SDL_Rect &dest, double angle,

@@ -66,7 +66,8 @@ namespace _ecs {
 
 	// Handlers
 	enum _hdr_id : id_type {
-		hdr_PLAYER,
+		hdr_PLAYER1,
+		hdr_PLAYER2,
 		hdr_DISHCOMB,
 		hdr_CLIENT,
 		hdr_INVENTORY,

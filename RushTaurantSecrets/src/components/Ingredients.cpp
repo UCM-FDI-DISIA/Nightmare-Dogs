@@ -21,6 +21,12 @@ void Ingredients::addIngredient(_ecs::_ingredients_id ingr) {
 
 }
 
+void Ingredients::initComponent() {
+	if (parent->getScene()->getGameObject(_ecs::hdr_KITCHENISLAND) != nullptr)
+		kitchenIsland = parent->getScene()->getGameObject(_ecs::hdr_KITCHENISLAND)->getComponent<KitchenIslandComp>();
+	else kitchenIsland = nullptr;
+}
+
 void Ingredients::removeLastIngredient() {
 	
  	kitchenIsland->returnIngredient(ingredients[ingredients.size() - 1]);
