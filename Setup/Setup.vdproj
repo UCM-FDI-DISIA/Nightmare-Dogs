@@ -28,7 +28,7 @@
         "Entry"
         {
         "MsmKey" = "8:_014799DC60DC6317454E21578F284465"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -226,7 +226,7 @@
         "Entry"
         {
         "MsmKey" = "8:_145F1CCFE5FD5B9890988525A1FE2030"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -532,7 +532,7 @@
         "Entry"
         {
         "MsmKey" = "8:_34987EF70C972257B40A6E71E99C864D"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -844,7 +844,7 @@
         "Entry"
         {
         "MsmKey" = "8:_52859A43820E8A4A67958E78F607F18D"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1138,7 +1138,7 @@
         "Entry"
         {
         "MsmKey" = "8:_68C87CD726DBAB32904F567EF059B900"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1372,7 +1372,7 @@
         "Entry"
         {
         "MsmKey" = "8:_80032DD32105D5596158C35669495797"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1408,7 +1408,7 @@
         "Entry"
         {
         "MsmKey" = "8:_845B23AB41225CF93F56D81E0B71872F"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1606,7 +1606,7 @@
         "Entry"
         {
         "MsmKey" = "8:_970127C501FD99B20425026E4181F5DF"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1624,7 +1624,7 @@
         "Entry"
         {
         "MsmKey" = "8:_98F7237E2CC9D670BAD634C92C641126"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1888,7 +1888,7 @@
         "Entry"
         {
         "MsmKey" = "8:_B411794967D1FF797F6219A421CE0572"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1900,7 +1900,7 @@
         "Entry"
         {
         "MsmKey" = "8:_B6369CD0DA382AD67AAB658A4D690345"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2085,12 +2085,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_C4D004391A21446082AFA08F9A7884D4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2260,7 +2254,7 @@
         "Entry"
         {
         "MsmKey" = "8:_D632302194A1FB2403F9CE0984349245"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2338,7 +2332,7 @@
         "Entry"
         {
         "MsmKey" = "8:_DD3DA139256EEA1918338C91E15F56D9"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2380,7 +2374,7 @@
         "Entry"
         {
         "MsmKey" = "8:_E0294277B06F8E4ABCC0C63BA6F6B729"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2559,6 +2553,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_F39DAE78DB3F44A5A158662047E32B63"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2566,7 +2566,7 @@
         "Entry"
         {
         "MsmKey" = "8:_F3A59FF730E6394C33BA0D575A964CD8"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2578,7 +2578,7 @@
         "Entry"
         {
         "MsmKey" = "8:_F417C74BEC0E334E469E79A3EAF00400"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2638,7 +2638,7 @@
         "Entry"
         {
         "MsmKey" = "8:_F9EB4623DB7782556018759A688BDA2A"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2710,7 +2710,7 @@
         "Entry"
         {
         "MsmKey" = "8:_FDA96A2A1E8B074589DAA94D7DB4E8B7"
-        "OwnerKey" = "8:_C4B78DE236F748A3A14977448FEA5D17"
+        "OwnerKey" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -12329,6 +12329,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_54675C48ED5940BBA01E785A42690B66"
+            {
+            "Name" = "8:Shortcut to Resultado principal from RushTaurantSecrets (Release x64)"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_F39B8F1D2E074E4B847CE98C44DB394A"
+            "Folder" = "8:_2E1AF587C09343C084207EC5C4452182"
+            "WorkingFolder" = "8:_B5A4F86B67E64110826EB5851CAC8FF4"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {
@@ -12728,7 +12742,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_C4B78DE236F748A3A14977448FEA5D17"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_F39B8F1D2E074E4B847CE98C44DB394A"
             {
             "SourcePath" = "8:..\\RushTaurantSecrets\\x64\\Release\\RushTaurantSecrets.exe"
             "TargetName" = "8:"
