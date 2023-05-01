@@ -49,17 +49,6 @@ void Restaurant::callAfterCreating() {
 	GameObject* managerContainer = new GameObject(this);
 	ClientsManager::init(managerContainer, menu(), 6 * 1000, 2, 3);
 
-	GameObject* prueba = new GameObject(this, _ecs::grp_CLIENTS);
-	new Transform(prueba, RelativeToGlobal::pointRestaurant(Vector(30, 18)), Vector(0, 0), 48, 96);
-	Animator::AnimParams aP;
-	aP.initFrame = 18;
-	aP.endFrame = 24;
-	aP.initFrame = 1;
-	new CharacterAnimator(prueba, "Client_1", aP);
-	StraightMovement* s = new StraightMovement(prueba, 3);
-	s->addPath(RelativeToGlobal::pointsRestaurant({ Vector(25, 18), Vector(25, 15), Vector(30,15) }));
-	s->enableInfiniteLoop();
-	s->setWalkingState(pushing);
 
 	dm = GameManager::get()->getDayManager();
 
@@ -131,35 +120,6 @@ void Restaurant::handleEvents() {
 	if (ih->isKeyDown(SDLK_p)) {
 		GameManager::get()->pushScene((GameManager::get()->getScene(sc_PAUSEMENU)));
 		restaurantMusic->pauseMusic();
-	}
-	else if (ih->isKeyDown(SDLK_f)) {
-		vector<pair<_ecs::_ingredients_id, int>> _ing;
-		_ing.push_back({ CHICKEN, 3 });
-		_ing.push_back({ EGG,8 });
-		_ing.push_back({ FLOUR,11 });
-		//_ing.push_back({ AJO,32 });
-		//_ing.push_back({ MEAT,4 });
-		//_ing.push_back({ STRAWBERRY,4 });
-		//_ing.push_back({ MANZANA,7 });
-		//_ing.push_back({ SALMON,1 });
-		//_ing.push_back({ GAMBAS,99 });
-
-		GameManager::get()->setIngredients(_ing);
-	}
-	else if (ih->isKeyDown(SDLK_g)) {
-		vector<pair<_ecs::_ingredients_id, int>> _ing;
-		_ing.push_back({ CORN, 3 });
-		_ing.push_back({ FLOUR,8 });
-		_ing.push_back({ MUSTARD,11 });
-		_ing.push_back({ POTATO,32 });
-		_ing.push_back({ CURRY,4 });
-		_ing.push_back({ RICE,4 });
-		_ing.push_back({ GARLIC,7 });
-		_ing.push_back({ SAUSAGE,1 });
-		_ing.push_back({ CHEESE,99 });
-		_ing.push_back({ EGG,19 });
-
-		GameManager::get()->setIngredients(_ing);
 	}
 	else {
 		Scene::handleEvents();

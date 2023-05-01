@@ -9,7 +9,7 @@
 
 DeskComp::DeskComp(GameObject* parent, float width, float height, int id) :
 	TriggerComp(parent, Vector(0, 0), width, height, DeskComp::id),
-	sucia(false), num(id),
+	dirty(false), num(id),
 	inventory(GameManager::get()->getRestaurant()->getUI()->getInventory()->getComponent<InventoryComp>()),
 	cleanSound(&sdlutils().soundEffects().at("CLEAN_TABLE")),
 	assignSound(&sdlutils().soundEffects().at("ASSIGN_TABLE"))
@@ -46,18 +46,18 @@ void DeskComp::serveTable() {
 }
 
 void DeskComp::cleanDesk() {
-	sucia = false;
+	dirty = false;
 	cleanSound->play();
 }
 
 bool DeskComp::isOccupied() {
-	return !assigned.empty() || sucia;
+	return !assigned.empty() || dirty;
 }
 
 void DeskComp::isOverlapping() {
 	if (!ih->isKeyDown(SDLK_SPACE)) return;
 
-	if (sucia) cleanDesk();
+	if (dirty) cleanDesk();
 	else serveTable();//spreadOverlap();
 }
 
@@ -66,7 +66,7 @@ void DeskComp::update() {
 		ClientState::States st = assigned[0]->getComponent<ClientState>()->getState();
 		// Si los clientes han terminado de comer se ensucia la mesa.
 		if (st == ClientState::HAS_LEFT) {
-			sucia = true;
+			dirty = true;
 			assigned.clear();
 			// Si los clientes se han quedado sin felicidad no se ensucia la mesa.
 		}
@@ -77,8 +77,13 @@ void DeskComp::update() {
 }
 
 void DeskComp::render() {
-	if (sucia) {
+	if (dirty) {
 		dirtyIcon->render(build_sdlrect(trans->getPos().getX() + trans->getW() / 2 - ICON_WIDTH / 2, trans->getPos().getY() +ICON_OFFSETY, ICON_WIDTH, ICON_HEIGHT));
 		dirtyPlate->render(build_sdlrect(trans->getPos().getX() + trans->getW() / 2 - PLATE_WIDTH / 2, trans->getPos().getY() + trans->getH() / 2 - PLATE_HEIGHT / 2, PLATE_WIDTH, PLATE_HEIGHT));
 	}
+}
+
+void DeskComp::nextDay() {
+	assigned.clear();
+	dirty = false;
 }

@@ -337,6 +337,8 @@ void ClientsManager::update() {
 
 void ClientsManager::nextDay() {
 	timer = GameManager::get()->getDayManager()->getClientFrequency();
+
+
 }
 
 
