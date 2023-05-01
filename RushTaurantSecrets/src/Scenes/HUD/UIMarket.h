@@ -18,6 +18,9 @@ private:
 	const int FONTSIZE = 50, ICONSIZE = 48, ICONX = 20, ICONY = 15, CENTEROUTLINE = 4;
 	const int TARGETOFFSET = 60;
 
+	const float BUTTONS_X = 160, BUTTONS_Y = 550,
+		BUTTONS_W = 96 * 3.2, BUTTONS_H = 32 * 3.2;
+
 	Scene* market;
 	SDLUtils* sdl = SDLUtils::instance();
 	Font* font;
@@ -51,6 +54,9 @@ private:
 	Texture* dayTexture;
 	Texture* dayOutline;
 
+	ButtonGO* buybutton;
+	bool buying = false;
+
 	void toggleDailyMenu();
 
 
@@ -70,5 +76,6 @@ public:
 	virtual Scene* getConnectedScene() { return market; }
 
 	BasketMarket* basketM();
+	ButtonGO* BuyButton();
 };
 

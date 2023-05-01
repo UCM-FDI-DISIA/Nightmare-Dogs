@@ -54,4 +54,6 @@ public:
 	}
 
 	void setActives(bool b);
+
+	bool isActive();
 };

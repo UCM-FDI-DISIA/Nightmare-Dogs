@@ -28,9 +28,9 @@ void ButtonComp::handleEvents()
 
 	 if (ih().joysticksInitialised()) {
 		ih().refresh();
-		if (!selected) buttonHoverSound->play();
+		/*if (!selected) buttonHoverSound->play();*/
 
-		buttonHoverSound->play();
+		//buttonHoverSound->play();
 		if (highlighted) {
 			if (ih().getButtonState(0, SDL_CONTROLLER_BUTTON_B)) {
 				//ih().clean();

@@ -5,6 +5,7 @@
 #include "../Managers/Money.h"
 #include "../GameObjects/BasketMarket.h"
 #include "../Components/BasketMarketComponent.h"
+#include "../GameObjects/ButtonGO.h"
 
 class SuperCashRegisterTriggerComp : public TriggerComp
 {
@@ -16,6 +17,8 @@ private:
 
 	BasketMarket* bM = nullptr;
 	BasketMarketComponent* bMC = nullptr;
+
+	ButtonGO* buybutton;
 
 	SDLUtils* sdl;
 	Music* restaurantMusic;

@@ -64,6 +64,10 @@ BasketMarket* SuperMarket::getBM() {
 	return uiMarket->basketM();
 }
 
+ButtonGO* SuperMarket::buyButton() {
+	return uiMarket->BuyButton();
+}
+
 void SuperMarket::receive(const Message& message) {
 
 	if (message.id == Message::msg_TO_RESTAURANT) {

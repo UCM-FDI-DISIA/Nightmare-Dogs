@@ -80,3 +80,11 @@ void GameObject::setActives(bool b) {
 		comp.second->setActive(b);
 	}
 }
+
+bool GameObject::isActive() {
+	for (auto& comp : components) {
+		if(!comp.second->isActive())
+			return false;
+	}
+	return true;
+}

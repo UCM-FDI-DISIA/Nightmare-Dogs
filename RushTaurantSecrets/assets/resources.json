@@ -595,6 +595,12 @@
       "rows": 1
     },
     {
+      "id": "BUY_BUTTON",
+      "file": "assets/Sprites/UI/HUD/Buy_Button.png",
+      "cols": 1,
+      "rows": 1
+    },
+    {
       "id": "SLIDER_BAR",
       "file": "assets/Sprites/UI/Menu/slider/sliderBar.png",
       "cols": 1,

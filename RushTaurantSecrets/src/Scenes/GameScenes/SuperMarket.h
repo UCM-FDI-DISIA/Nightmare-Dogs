@@ -51,4 +51,5 @@ public:
 	void createMap();
 
 	BasketMarket* getBM();
+	ButtonGO* buyButton();
 };
