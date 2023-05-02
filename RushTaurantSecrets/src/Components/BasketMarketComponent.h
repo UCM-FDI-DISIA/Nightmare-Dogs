@@ -62,7 +62,7 @@ public:
 	void changeAmount(SDL_KeyCode key);
 	void setTotalPrize();
 	void cleanEmptyBasket();
-
+	void nextDay()override;
 	virtual void handleEvents();
 	void receive(const Message& message);
 	void addToBasketOnline(_ecs::_ingredients_id ing, int n);

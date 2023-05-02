@@ -278,7 +278,13 @@ void BasketMarketComponent::cleanEmptyBasket() {
 	if (selectedIngr == ingredients.end())selectedIngr = ingredients.begin();
 	if (ingredients.size() == 0)selectedIngr = ingredients.end();
 }
-
+void BasketMarketComponent:: nextDay() {
+	totalPrize = 0;
+	basketON = false;
+	chooseHMMode = false;
+	money = GameManager::get()->getMoney();
+	selectedIngr = ingredients.end();
+}
 void BasketMarketComponent::receive(const Message& message) {
 	if(message.id == Message::msg_BASKET) {
 		auto it = ingredients.find(message.basket.ing);
