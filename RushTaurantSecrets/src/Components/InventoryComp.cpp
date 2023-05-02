@@ -122,10 +122,10 @@ void InventoryComp::setPosition(int i, int& x, int& y) {
 
 void InventoryComp::handleEvents() {
 	//  hacia arriba
-	if (cellSelected > -1 &&(ih->joysticksInitialised() && ih->getButtonState(0, SDL_CONTROLLER_BUTTON_LEFTSHOULDER || !ih->joysticksInitialised() && ih->isKeyDown(SDLK_LEFT))) )
+	if (cellSelected > -1 && (ih->joysticksInitialised() && ih->getButtonState(0, SDL_CONTROLLER_BUTTON_LEFTSHOULDER) || !ih->joysticksInitialised() && ih->isKeyDown(SDLK_LEFT))) 
 		prevDish();
 	//  hacia abajo
-	else if (ih->joysticksInitialised() && ih->getButtonState(0, SDL_CONTROLLER_BUTTON_RIGHTSHOULDER || !ih->joysticksInitialised() && ih->isKeyDown(SDLK_RIGHT)) )
+	else if (ih->joysticksInitialised() && ih->getButtonState(0, SDL_CONTROLLER_BUTTON_RIGHTSHOULDER) || !ih->joysticksInitialised() && ih->isKeyDown(SDLK_RIGHT)) 
 		nextDish();
 }
 
