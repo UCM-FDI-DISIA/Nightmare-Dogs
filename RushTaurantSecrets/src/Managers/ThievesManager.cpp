@@ -19,7 +19,7 @@ void ThievesManager::createThief(int sprite, int pos) {
 }
 
 void ThievesManager::addFrequently() {
-	if (thiefs->size() <= 0) {
+	if (thiefs->size() <= 0 && GameManager::get()->getDayManager()->getDay() > 1) {
 		if (played) {
 			played = false;
 			warningSound->haltChannel();

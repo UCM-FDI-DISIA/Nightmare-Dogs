@@ -286,6 +286,8 @@ bool GameManager::checkload() {
 void GameManager::newGame() {
 	days->setDay(1, true);
 	hasKilled = false;
+	hasEverKilled.first = false;
+	hasEverKilled.second = 0;
 	killedNum = 0;
 	money->newGame();
 	reputation->newGame();

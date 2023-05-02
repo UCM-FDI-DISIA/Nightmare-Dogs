@@ -78,7 +78,6 @@ UIRestaurant::UIRestaurant() : Scene() {
 	GameObject* thiefExclamation = createIcon("EXCLAMATION", Vector(640, 85), 32, 32);
 	new Warning(thiefExclamation);
 	
-	
 
 	// Racha de cobros
 	GameObject* streak = new GameObject(this, _ecs::grp_HUD, _ecs::hdr_STREAK);
