@@ -41,7 +41,7 @@ void BasketMarketComponent::addToBasket(_ecs::_ingredients_id ing, int n, int ad
 	//addPrice es el dinero total según n cantidades del ingrediente ing añadida a la cesta
 
 	auto it = ingredients.find(ing);
-	if (totalDifIngr < MAX_ING || it != ingredients.end()) { // si no ha superado el límite de ingredientes a comprar o el ingrediente ya está en la cesta
+	if ((totalDifIngr < MAX_ING || it != ingredients.end()) && n > 0) { // si no ha superado el límite de ingredientes a comprar o el ingrediente ya está en la cesta
 		if (totalDifIngr < MAX_ING || it->first == ing) {
 			if (it != ingredients.end()) {
 				it->second += n;
@@ -279,6 +279,7 @@ void BasketMarketComponent::cleanEmptyBasket() {
 	if (ingredients.size() == 0)selectedIngr = ingredients.end();
 }
 void BasketMarketComponent:: nextDay() {
+	totalDifIngr = 0;
 	totalPrize = 0;
 	basketON = false;
 	chooseHMMode = false;
@@ -292,16 +293,20 @@ void BasketMarketComponent::receive(const Message& message) {
 			totalPrize -= _ecs::MarketIngs[message.basket.ing - FLOUR].price * it->second;
 			it->second = message.basket.n;
 			if(message.basket.n == 0) {
-				if(selectedIngr == it) selectedIngr = ingredients.begin();
-				ingredients.erase(it);
+				if(selectedIngr == it) {
+					ingredients.erase(it);
+					selectedIngr = ingredients.begin();
+				} else {
+					ingredients.erase(it);
+				}
 				totalDifIngr--;
 			}
 		} else {
-			ingredients.insert({ message.basket.ing, message.basket.n });
+			auto aux = ingredients.insert({ message.basket.ing, message.basket.n });
 			totalDifIngr++; //num de dif ing
+			if(selectedIngr == ingredients.end()) selectedIngr = aux.first;
 		}
 		totalPrize += _ecs::MarketIngs[message.basket.ing - FLOUR].price * message.basket.n;
-		selectedIngr = ingredients.find(message.basket.ing);
 		setTotalPrize();
 	}
 }
